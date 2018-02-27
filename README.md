@@ -1,24 +1,23 @@
-# README
+# Development
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. `$ docker-compose up -d`
+1. `$ open vnc://localhost:5900`
+    - cf. https://github.com/SeleniumHQ/docker-selenium#debugging
+1. Enter password (default: `secret`)
+1. Run RSpec `$ docker exec -it app sh -c 'LAUNCH_BROWSER=true bundle exec rspec'`
 
-Things you may want to cover:
+# Files
 
-* Ruby version
+## Docker settings
 
-* System dependencies
+- Dockerfile
+- docker-compose.yml
 
-* Configuration
+## Sample pages and tests
 
-* Database creation
+- app/views/sample/index.html.erb
+- spec/features/sample_spec.rb
 
-* Database initialization
+## Capybara and Selenium settings
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- spec/rails_helper.rb
