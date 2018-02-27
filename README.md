@@ -6,6 +6,8 @@
 1. Enter password (default: `secret`)
 1. Run RSpec `$ docker exec -it app sh -c 'LAUNCH_BROWSER=true bundle exec rspec'`
 
+![Screenshot](docs/screenshot.png)
+
 # Files
 
 ## Docker settings
