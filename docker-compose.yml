@@ -1,0 +1,28 @@
+version: "2"
+services:
+  app:
+    container_name: app
+    build: .
+    command: tail -f /dev/null
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+    networks:
+      test-network:
+        aliases:
+          - app.com
+  chrome:
+    container_name: chrome
+    image: selenium/standalone-chrome-debug:3.9.1-actinium
+    ports:
+      - 4444:4444
+      - 5900:5900
+    depends_on:
+      - app
+    networks:
+      test-network:
+        aliases:
+          - chrome.com
+networks:
+  test-network:
