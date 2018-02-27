@@ -1,0 +1,5 @@
+FROM node:alpine
+WORKDIR /app
+RUN yarn init -y && yarn add selenium-webdriver
+COPY test.js /app/test.js
+CMD node test.js

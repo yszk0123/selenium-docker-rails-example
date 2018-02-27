@@ -12,6 +12,15 @@ services:
       test-network:
         aliases:
           - app.com
+  node:
+    container_name: node-test
+    build:
+      context: .
+      dockerfile: Dockerfile.node
+    volumes:
+      - ./test.js:/app/test.js
+    networks:
+      test-network:
   chrome:
     container_name: chrome
     image: selenium/standalone-chrome-debug:3.9.1-actinium
