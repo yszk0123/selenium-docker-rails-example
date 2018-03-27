@@ -12,14 +12,14 @@
 
 ## Docker settings
 
-- Dockerfile
-- docker-compose.yml
+- [Dockerfile](Dockerfile)
+- [docker-compose.yml](docker-compose.yml)
 
 ## Sample pages and tests
 
-- app/views/sample/index.html.erb
-- spec/features/sample_spec.rb
+- [app/views/sample/index.html.erb](app/views/sample/index.html.erb)
+- [spec/features/sample_spec.rb](spec/features/sample_spec.rb)
 
 ## Capybara and Selenium settings
 
-- spec/rails_helper.rb
+- [spec/rails_helper.rb](spec/rails_helper.rb)
